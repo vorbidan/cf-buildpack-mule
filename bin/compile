@@ -11,8 +11,8 @@ CACHE_DIR=$2
 mkdir -p "$BUILD_DIR" "$CACHE_DIR"
 
 # Files
-JDK=jdk-7u67-linux-x64.tar.gz
-MULE=mule-standalone-3.5.0.tar.gz
+JDK=openjdk-1.8.0_45.tar.gz
+MULE=mule-standalone-3.7.0.tar.gz
 
 # Move app into deployment area
 cd $BUILD_DIR
@@ -25,12 +25,12 @@ then
 fi
 
 # Explode the Mule tarball to BUILD_DIR
-if [ ! -e $BUILD_DIR/local/mule-standalone-3.5.0 ]
+if [ ! -e $BUILD_DIR/local/mule-standalone-3.7.0 ]
 then
   if [ ! -e $CACHE_DIR/$MULE ]
   then
     OLDPWD=$(pwd)
-    cd $CACHE_DIR && wget https://repository.mulesoft.org/nexus/content/repositories/releases/org/mule/distributions/mule-standalone/3.5.0/mule-standalone-3.5.0.tar.gz
+    cd $CACHE_DIR && wget https://repository.mulesoft.org/nexus/content/repositories/releases/org/mule/distributions/mule-standalone/3.7.0/mule-standalone-3.7.0.tar.gz
     cd $OLDPWD
   fi
   echo "------> Installing Mule ($MULE)..."
@@ -44,13 +44,13 @@ then
   if [ ! -e $CACHE_DIR/$JDK ]
   then
     OLDPWD=$(pwd)
-    cd $CACHE_DIR && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u67-b01/jdk-7u67-linux-x64.tar.gz
+    cd $CACHE_DIR && wget https://download.run.pivotal.io/openjdk-jdk/centos6/x86_64/openjdk-1.8.0_45.tar.gz
     cd $OLDPWD
   fi
   tar -xzf $CACHE_DIR/$JDK -C $BUILD_DIR/local
 fi
 
 # Move the app into position
-mv $BUILD_DIR/app.zip $BUILD_DIR/local/mule-standalone-3.5.0/apps/
+mv $BUILD_DIR/app.zip $BUILD_DIR/local/mule-standalone-3.7.0/apps/
 
 echo "Complete."
