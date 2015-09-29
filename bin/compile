@@ -47,6 +47,7 @@ then
     cd $CACHE_DIR && wget https://download.run.pivotal.io/openjdk-jdk/centos6/x86_64/openjdk-1.8.0_45.tar.gz
     cd $OLDPWD
   fi
+  mkdir -p $BUILD_DIR/local/${JDK%%.tar\.gz}
   tar -xzf $CACHE_DIR/$JDK -C $BUILD_DIR/local/${JDK%%.tar\.gz}
 fi
 
