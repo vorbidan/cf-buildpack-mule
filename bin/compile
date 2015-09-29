@@ -38,7 +38,7 @@ then
 fi
 
 # Explode the OpenJDK tarball to BUILD_DIR
-if [ ! -e $BUILD_DIR/local/jdk1.7.0_67 ]
+if [ ! -e $BUILD_DIR/local/openjdk-1.8.0_45 ]
 then
   echo "------> Installing JDK ($JDK)..."
   if [ ! -e $CACHE_DIR/$JDK ]
@@ -55,5 +55,5 @@ fi
 mv $BUILD_DIR/app.zip $BUILD_DIR/local/mule-standalone-3.7.0/apps/
 
 echo "Complete."
-echo `ls -al $BUILD_DIR/local/mule-standalone-3.7.0/apps/`
-echo `ls -al $BUILD_DIR/local`
+
+ls -al /home/vcap/app/local
