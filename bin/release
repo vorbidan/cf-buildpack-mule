@@ -3,5 +3,5 @@
 cat << "EOM"
 addons:
 default_process_types:
-  web: MULE_HOME=/home/vcap/app/local/mule-standalone-3.7.0 JAVA_HOME=/home/vcap/app/local/openjdk-1.8.0_45 PATH=/home/vcap/app/local/openjdk-1.8.0_45/bin:/home/vcap/app/local/mule-standalone-3.7.0:$PATH mule -M-Dhttp.port=$PORT
+  web: MULE_HOME=/app/local/mule-standalone-3.7.0 JAVA_HOME=/app/local/openjdk-1.8.0_45 PATH=/app/local/openjdk-1.8.0_45/bin:/app/local/mule-standalone-3.7.0:$PATH mule -M-Dhttp.port=$PORT
 EOM
