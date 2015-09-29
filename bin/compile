@@ -56,4 +56,4 @@ mv $BUILD_DIR/app.zip $BUILD_DIR/local/mule-standalone-3.7.0/apps/
 
 echo "Complete."
 
-ls -al /home/vcap/app/local
+ls -al /
