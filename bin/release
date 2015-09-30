@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-BUILD_DIR=$1
-
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
-echo BUILD_DIR=$BUILD_DIR
-echo DIR=$DIR
-echo PWD=$PWD
-
 cat << "EOM"
 addons:
 default_process_types:
-  web: MULE_HOME=/app/local/mule-standalone-3.7.0 JAVA_HOME=/app/local/openjdk-1.8.0_45 PATH=/app/local/openjdk-1.8.0_45/bin:/app/local/mule-standalone-3.7.0:$PATH mule -M-Dhttp.port=$PORT
+  web: MULE_HOME=./local/mule-standalone-3.7.0 JAVA_HOME=./local/openjdk-1.8.0_45 PATH=$JAVA_HOME/bin:$MULE_HOME/mule-standalone-3.7.0:$PATH mule -M-Dhttp.port=$PORT
 EOM
