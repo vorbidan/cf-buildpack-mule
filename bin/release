@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# bin/release <build-dir>
-
+## bin/release <build-dir>
+echo $1
 cat << "EOM"
 addons:
 default_process_types:
