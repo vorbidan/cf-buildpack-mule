@@ -1,11 +1,9 @@
 #!/bin/bash
 
 BUILD_DIR=$1
-echo "------>$BUILD_DIR"
 
-cat << EOM
+cat <<EOM
 ---
-addons:
 default_process_types:
-  web: MULE_HOME=./local/mule-standalone-3.7.0 JAVA_HOME=./local/openjdk-1.8.0_45 PATH=$JAVA_HOME/bin:$MULE_HOME/mule-standalone-3.7.0:$PATH mule -M-Dhttp.port=$PORT
+  web: ./launch.sh
 EOM
