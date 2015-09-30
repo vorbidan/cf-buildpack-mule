@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $1
-
 cat << EOM
 ---
 addons:
