@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-## bin/release <build-dir>
+#!/usr/bin
+
 echo $1
 cat << "EOM"
 addons:
