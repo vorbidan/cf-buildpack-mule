@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # usage: bin/compile <build-dir> <cache-dir>
-
+ 
 # Fail fast, fail hard
 set -eo pipefail
 
