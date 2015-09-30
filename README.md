@@ -3,10 +3,7 @@ cf-buildpack-mule
 
 Deploy mule apps to Cloud Foundry
 
+## Usage
 ```
-git clone https://github.com/danielkennedy/cf-buildpack-mule
-cd cf-buildpack-mule
-zip -r cf-buildpack-mule.zip bin/
-cf create-buildpack mule cf-buildpack-mule.zip 1 --enable
-cf push bookstore -i 1 -m 512M -b mule -p examples/bookstore/bookstore.zip 
+cf push <APP-NAME> -i 1 -m 2048M -b https://github.com/vorbidan/cf-buildpack-mule.git -p <PATH TO YOU MULE-APP.zip>
 ```
