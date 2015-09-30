@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
+
+BUILD_DIR=$1
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+echo BUILD_DIR=$BUILD_DIR
+echo DIR=$DIR
+echo PWD=$PWD
+
 cat << "EOM"
 addons:
 default_process_types:
