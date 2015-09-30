@@ -11,7 +11,7 @@ CACHE_DIR=$2
 mkdir -p "$BUILD_DIR" "$CACHE_DIR"
 
 # Files
-JDK=openjdk-1.8.0_45.tar.gz
+JDK=openjdk-1.8.0_25.tar.gz
 MULE=mule-standalone-3.7.0.tar.gz
 
 # Move app into deployment area
@@ -38,13 +38,13 @@ then
 fi
 
 # Explode the OpenJDK tarball to BUILD_DIR
-if [ ! -e $BUILD_DIR/local/openjdk-1.8.0_45 ]
+if [ ! -e $BUILD_DIR/local/openjdk-1.8.0_25 ]
 then
   echo "------> Installing JDK ($JDK)..."
   if [ ! -e $CACHE_DIR/$JDK ]
   then
     OLDPWD=$(pwd)
-    cd $CACHE_DIR && wget https://download.run.pivotal.io/openjdk-jdk/centos6/x86_64/openjdk-1.8.0_45.tar.gz
+    cd $CACHE_DIR && wget https://download.run.pivotal.io/openjdk-jdk/lucid/x86_64/openjdk-1.8.0_25.tar.gz
     cd $OLDPWD
   fi
   mkdir -p $BUILD_DIR/local/${JDK%%.tar\.gz}
