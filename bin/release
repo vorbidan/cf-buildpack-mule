@@ -4,6 +4,8 @@ BUILD_DIR=$1
 
 cat <<EOM
 ---
+addons:
+config_vars: 
 default_process_types:
-  web: ./launch.sh
+  web: JAVA_HOME=$PWD/local/openjdk-1.8.0_45 MULE_HOME=$PWD/local/mule-standalone-3.7.0 PATH=$PWD/local/openjdk-1.8.0_45/bin:$PWD/local/mule-standalone-3.7.0/bin:$PATH mule -M-Dhttp.port=$PORT
 EOM
