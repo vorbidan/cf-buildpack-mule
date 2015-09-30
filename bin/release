@@ -8,5 +8,5 @@ cat <<EOM
 addons:
 config_vars: 
 default_process_types:
-  web: JAVA_HOME=\$PWD/local/openjdk-1.8.0_25 MULE_HOME=\$PWD/local/mule-standalone-3.7.0 PATH=\$PWD/local/openjdk-1.8.0_25/bin:\$PWD/local/mule-standalone-3.7.0/bin:\$PATH mule start -M-Dhttp.port=\$PORT
+  web: JAVA_HOME=\$PWD/local/openjdk-1.8.0_25 MULE_HOME=\$PWD/local/mule-standalone-3.7.0 PATH=\$PWD/local/openjdk-1.8.0_25/bin:\$PWD/local/mule-standalone-3.7.0/bin:\$PATH echo $JAVA_HOME ls -al $JAVA_HOME mule -M-Dhttp.port=\$PORT
 EOM
