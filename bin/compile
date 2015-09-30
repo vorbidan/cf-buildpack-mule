@@ -22,8 +22,6 @@ cd -
 # debugging
 echo “Content of BUILD_DIR”
 ls -al $BUILD_DIR
-echo “Contents of app.zip”
-unzip -tvf $BUILD_DIR/app.zip
 
 if [ ! -d $BUILD_DIR/local ]
 then
