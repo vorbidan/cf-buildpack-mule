@@ -16,7 +16,7 @@ MULE=mule-standalone-3.7.0.tar.gz
 
 # Move app into deployment area
 cd $BUILD_DIR
-zip -r app.zip *
+zip -rm app.zip *
 cd -
 
 # debugging
