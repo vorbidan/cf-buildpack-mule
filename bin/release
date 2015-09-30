@@ -1,6 +1,7 @@
-#!/usr/bin
+#!/bin/bash
 
 echo $1
+
 cat << "EOM"
 addons:
 default_process_types:
